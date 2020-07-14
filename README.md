@@ -1,27 +1,28 @@
-# RoutingApp
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.6.
-
-## Development server
-
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+1. 
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+2. Clicking on 'Pokemon' header will open the list of pokemons
+ - you can click on next button to get next list of pokemon
+ - you can click on next button to get previous list of pokemon
+ - previous button will be disabled for the first page of pokemons
+ - clicking on a pokemon in the list will take you to the details page.
+ 
+ 4. Home page is the documentation page
+ 
+ 4. By default Details page will be disabled
+ 
+ 4. create product page:
+  - you can add up to 5 products at the same time
+  - you can reset any form individually.
+  - you can save all forms simultaneously.
+  - valid image url examples(image url will reject any character other than '/' or alphanumeric :
+    - https://picsum.photos/id/237/200/300
+    - https://picsum.photos/200/300
+    - https://picsum.photos/seed/picsum/200/300
+  
+ 5. product list
+  - Will get list of products created from local storage
+  - will redirect the page through canActivate to new page "not authorised component"
+  
+ 
