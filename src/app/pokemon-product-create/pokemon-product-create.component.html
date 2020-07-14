@@ -1,0 +1,35 @@
+<div *ngIf="showSuccessMessage" class="row">
+  <div class="col-sm-6 success-message">
+    <a class="close" (click)="showSuccessMessage = false">&times;</a>
+    <span>product successfully saved</span>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-9"></div>
+  <div class="col-sm-3">
+    <button
+      type="button"
+      (click)="onSubmit()"
+      class="btn btn-primary page-button"
+    >
+      Save
+    </button>
+    <button
+      [disabled]="productList?.value?.length > 4"
+      type="button"
+      (click)="onAdd()"
+      class="btn btn-primary page-button"
+    >
+      Add
+    </button>
+  </div>
+</div>
+
+<div class="row">
+  <div *ngFor="let product of productList.controls" class="col-sm-2 p-0">
+    <app-create-product-child
+      [productForm]="product"
+      [submitted]="submitted"
+    ></app-create-product-child>
+  </div>
+</div>

@@ -1,0 +1,41 @@
+<div class="row">
+  <div *ngFor="let pokemon of pokemonList" class="col-sm-3">
+    <a
+      [routerLink]="['/pokemonDetailComponent']"
+      [queryParams]="{ url: pokemon.url }"
+      class="btn"
+    >
+      <div class="card" style="width: 18rem;">
+        <img
+          class="card-img-top"
+          src="../../assets/ashImage.png"
+          alt="Card image cap"
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{ pokemon?.name }}</h5>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-9"></div>
+  <div class="col-sm-3">
+    <button
+      type="button"
+      (click)="onPrevious()"
+      [disabled]="offset === 0"
+      class="btn btn-primary page-button"
+    >
+      Previous
+    </button>
+    <button
+      type="button"
+      (click)="onNext()"
+      class="btn btn-primary page-button"
+    >
+      Next
+    </button>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+.page-button {
+  width: 120px;
+  margin: 20px;
+}
+
+.success-message {
+  background-color: yellowgreen;
+  color: white;
+}

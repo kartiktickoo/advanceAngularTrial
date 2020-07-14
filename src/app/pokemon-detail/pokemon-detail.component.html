@@ -1,0 +1,82 @@
+<!-- <div class="main-class">
+  <h1>{{ pokemonDetailObj?.name }}</h1>
+
+  <label class="pok-type" *ngFor="let type of pokemonDetailObj.types">{{
+    type?.type?.name
+  }}</label>
+</div> -->
+
+<div *ngIf="error">
+  <h1>{{ error }}</h1>
+</div>
+
+<div *ngIf="!error">
+  <div class="main-heading">
+    <h1>{{ pokemonDetailObj?.name }}</h1>
+  </div>
+
+  <div class="blue-square-container">
+    <label
+      class="pok-type"
+      *ngFor="let type of pokemonDetailObj?.types"
+      [style.background-color]="getBackgroundColor(type?.type?.name)"
+      >{{ type?.type?.name }}</label
+    >
+  </div>
+
+  <div class="row">
+    <div class="col-sm-5 right-align">
+      <img
+        class="pokemon-image"
+        src="{{ pokemonDetailObj?.sprites?.front_default }}"
+      />
+    </div>
+    <div class="col-sm-4 pt-5">
+      <div class="row" *ngFor="let stat of pokemonDetailObj?.stats">
+        <div class="col-sm-6">
+          <label>{{ stat?.stat?.name }}</label>
+        </div>
+        <div class="col-sm-6">
+          <div class="progress">
+            <div
+              class="progress-bar"
+              role="progressbar"
+              aria-valuenow="70"
+              aria-valuemin="0"
+              aria-valuemax="100"
+              style="width: 70%;"
+            >
+              {{ stat?.base_stat }}%
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-3 left-align"></div>
+    <div class="col-sm-6 left-align sub-heading"><h5>Profile</h5></div>
+  </div>
+
+  <div class="row">
+    <div class="col-"></div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-3 left-align"></div>
+    <div class="col-sm-6 left-align sub-heading"><h5>Evolutions</h5></div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-3 left-align"></div>
+    <div class="col-sm-6 left-align sub-heading">
+      <h5>Damage when attacked</h5>
+    </div>
+  </div>
+
+  <div class="row"></div>
+  <div class="row"></div>
+  <div class="row"></div>
+  <div class="row"></div>
+</div>
