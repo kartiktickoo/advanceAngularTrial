@@ -1,16 +1,14 @@
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-1. 
-
-2. Clicking on 'Pokemon' header will open the list of pokemons
+1. Clicking on 'Pokemon' header will open the list of pokemons
  - you can click on next button to get next list of pokemon
  - you can click on next button to get previous list of pokemon
  - previous button will be disabled for the first page of pokemons
  - clicking on a pokemon in the list will take you to the details page.
  
- 4. Home page is the documentation page
+ 2. Home page is the documentation page
  
- 4. By default Details page will be disabled
+ 3. By default Details page will be disabled
  
  4. create product page:
   - you can add up to 5 products at the same time
